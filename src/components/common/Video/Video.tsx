@@ -3,7 +3,7 @@ import React, { useRef, FC, useEffect } from 'react';
 import styles from './Video.module.scss';
 import { motion, useInView } from 'framer-motion';
 import clsx from 'clsx';
-import { useMediaQuery } from '@/hooks/useMediaQuery';
+// import { useMediaQuery } from '@/hooks/useMediaQuery';
 
 interface IVideo {
   src: string;
@@ -12,7 +12,7 @@ interface IVideo {
 }
 
 export const Video: FC<IVideo> = ({ src, left = false, className }) => {
-  const mobileL = useMediaQuery('mobileL');
+  // const mobileL = useMediaQuery('mobileL');
 
   const videoRef = useRef<HTMLVideoElement>(null);
 

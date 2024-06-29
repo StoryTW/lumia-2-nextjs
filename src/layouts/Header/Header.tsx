@@ -1,5 +1,5 @@
 'use client';
-import React, { FC, useEffect, useState } from 'react';
+import React, { FC, useState } from 'react';
 import styles from './Header.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -22,27 +22,17 @@ export const Header: FC = () => {
         <nav className={styles.navbar}>
           <ul className={styles.list}>
             <li className={styles.item}>
-              <a className={styles.link} href='#two'>
-                ABOUT
+              <a className={styles.link} href='#'>
+                Products
               </a>
             </li>
             <li className={styles.item}>
-              <a className={styles.link} href='#three'>
-                FEATURES
+              <a className={styles.link} href='#'>
+                Docs
               </a>
             </li>
             <li className={styles.item}>
-              <a className={styles.link} href='#eleven'>
-                ROADMAP
-              </a>
-            </li>
-            <li className={styles.item}>
-              <a className={styles.link} href='#partners'>
-                PARTNERS
-              </a>
-            </li>
-            <li className={styles.item}>
-              <ButtonColor href='#ten'>AIRDROP</ButtonColor>
+              <ButtonColor href='#'>Governance</ButtonColor>
             </li>
           </ul>
         </nav>

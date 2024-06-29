@@ -1,10 +1,5 @@
 .header {
   background: transparent;
-  // background: #000;
-  position: static;
-  overflow: visible;
-  z-index: 9999;
-  top: 0;
 
   .wrapper {
     display: flex;
@@ -38,7 +33,7 @@
           padding: 13px 0px;
 
           .link {
-            @include Semibold_14;
+            @include Regular_18;
             color: var(--white);
             opacity: 0.7;
             @include transition;

@@ -7,38 +7,28 @@ interface IMobileNav {
   setOpenMenu: Dispatch<SetStateAction<boolean>>;
 }
 
+const navItems = [
+  {
+    id: 0,
+    path: '#',
+    name: 'Products',
+  },
+  {
+    id: 1,
+    path: '#',
+    name: 'Docs',
+  },
+  {
+    id: 3,
+    path: '#',
+    name: 'Governance',
+  },
+];
+
 export const MobileBurger: React.FC<IMobileNav> = ({ openMenu, setOpenMenu }) => {
   const handleClose = () => {
     setOpenMenu(false);
   };
-
-  const navItems = [
-    {
-      id: 0,
-      path: '#two',
-      name: 'ABOUT',
-    },
-    {
-      id: 1,
-      path: '#three',
-      name: 'FEATURES',
-    },
-    {
-      id: 2,
-      path: '#eleven',
-      name: 'ROADMAP',
-    },
-    {
-      id: 2,
-      path: '#partners',
-      name: 'PARTNERS',
-    },
-    {
-      id: 3,
-      path: '#ten',
-      name: 'AIRDROP',
-    },
-  ];
 
   return (
     <AnimatePresence mode='wait'>
