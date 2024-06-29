@@ -1,9 +1,12 @@
+import { SectionGrid } from '@/components/sections/SectionGrid/SectionGrid';
 import styles from './MainPage.module.scss';
 import { SectionApi } from '@/components/sections/SectionApi/SectionApi';
+import { SectionOne } from '@/components/sections/SectionOne/SectionOne';
 
 export function MainPage() {
   return (
     <main id='mainPage' className={styles.mainPage}>
+      <SectionOne />
       <SectionApi
         id='three'
         title='Swap API'
@@ -22,6 +25,8 @@ export function MainPage() {
         description='Empower your users with the easiest, fastest, and most secure cross-chain bridging experience powered by a trustless, peer-to-peer environment.'
         video='6'
       />
+
+      <SectionGrid />
     </main>
   );
 }

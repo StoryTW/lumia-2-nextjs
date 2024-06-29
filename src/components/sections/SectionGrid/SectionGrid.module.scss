@@ -1,0 +1,11 @@
+.sectionGrid {
+  margin-bottom: 220px;
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 500px));
+    gap: 60px;
+  }
+}

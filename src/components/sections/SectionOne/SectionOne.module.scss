@@ -1,46 +1,17 @@
 .mainSection {
-  height: 100vh;
-  min-height: 100vh;
+  height: 100%;
+  // min-height: 1000px;
   position: relative;
   scroll-snap-align: start;
   display: flex;
   justify-content: space-between;
-  padding: 0px 64px;
+  padding: 334px 64px;
 
   @include respond(tabletL) {
     padding: 0px 24px;
-  }
-
-  @include respond(tablet) {
-    flex-direction: column-reverse;
-    justify-content: start;
-    height: 100%;
-    min-height: 100%;
-    margin-bottom: 48px;
-  }
-
-  @include respond(tabletL) {
-    padding: 0px 24px;
-  }
-
-  @include respond(tabletL) {
-    flex-direction: column;
-    justify-content: start;
-    height: 100%;
-    min-height: 100%;
-    margin-bottom: 248px;
   }
 
   .wrp {
-    position: relative;
-    height: max-content;
-    padding-top: 120px;
-    z-index: 2;
-
-    @include respond(tablet) {
-      padding-top: 12px;
-    }
-
     .info {
       max-width: 650px;
 
@@ -64,31 +35,13 @@
           font-size: 40px;
         }
       }
-
-      .description {
-        @include Regular_32;
-        color: var(--white);
-        text-shadow: var(--text_shadow);
-
-        @include respond(tabletL) {
-          font-size: 22px;
-        }
-
-        @include respond(mobileL) {
-          font-size: 20px;
-        }
-
-        &.margin {
-          margin-bottom: 34px;
-        }
-      }
     }
   }
 
   .videoWrapper {
     .video {
       position: absolute;
-      right: -30%;
+      right: 0%;
       top: -150px;
       width: 100%;
       min-width: 100%;
@@ -96,22 +49,18 @@
       height: 100%;
       object-fit: cover;
       z-index: -1;
-      overflow: hidden;
 
-      @include respond(laptopB) {
-        top: 80px;
-      }
+      // @include respond(laptopB) {
+      //   top: 80px;
+      // }
 
-      @include respond(tabletL) {
-        //   top: 300px;
-        //   bottom: 0px;
-        // position: static;
-        object-fit: contain;
-        height: 400px;
-        width: 400px;
-        transform: scale(2);
-        top: 100px;
-      }
+      // @include respond(tabletL) {
+      //   object-fit: contain;
+      //   height: 400px;
+      //   width: 400px;
+      //   transform: scale(2);
+      //   top: 100px;
+      // }
     }
   }
 }

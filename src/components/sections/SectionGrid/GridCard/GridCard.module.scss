@@ -1,0 +1,26 @@
+.card {
+  .wrp {
+    display: flex;
+    flex-direction: column;
+
+    .content {
+      width: 326px;
+      height: 326px;
+      min-width: 326px;
+      min-height: 326px;
+      background: white;
+    }
+
+    .title {
+      @include Regular_52;
+
+      background: linear-gradient(90deg, #B6DAFF 0%, #FFFFFF 45.5%, #505E7D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .description {
+      @include Regular_24;
+    }
+  }
+}

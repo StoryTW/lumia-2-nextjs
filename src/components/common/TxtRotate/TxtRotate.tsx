@@ -1,40 +1,50 @@
 import React, { useState, useEffect } from 'react';
 import styles from './TxtRotate.module.scss';
+import { AnimatePresence, motion } from 'framer-motion';
 
-const arr = ['Connected', 'Intelligent', 'Private', 'Capital efficient', 'Liquid'];
+const textArray = ['Superior UX', 'Faster deployment', 'Best Prices'];
+
+const animate = {
+  initial: {
+    y: '100%',
+    opacity: 0,
+  },
+  animate: {
+    y: '0%',
+    opacity: 1,
+  },
+  exit: {
+    y: '-100%',
+    opacity: 0,
+  },
+};
 
 export const TxtRotate = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState(arr[0]);
-  const [deleting, setDeleting] = useState(false);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    let timeout: NodeJS.Timeout;
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % textArray.length);
+    }, 2000);
 
-    if (deleting) {
-      if (displayedText.length > 0) {
-        timeout = setTimeout(() => {
-          setDisplayedText(displayedText.slice(0, -1));
-        }, 100);
-      } else {
-        setDeleting(false);
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % arr.length);
-      }
-    } else {
-      const newText = arr[currentIndex];
-      if (displayedText.length < newText.length) {
-        timeout = setTimeout(() => {
-          setDisplayedText(newText.slice(0, displayedText.length + 1));
-        }, 100);
-      } else {
-        timeout = setTimeout(() => {
-          setDeleting(true);
-        }, 2000);
-      }
-    }
+    return () => clearInterval(interval);
+  }, []);
 
-    return () => clearTimeout(timeout);
-  }, [displayedText, deleting, currentIndex, arr]);
-
-  return <span className={styles.text}>{displayedText}</span>;
+  return (
+    <div className={styles.container}>
+      <AnimatePresence mode='wait'>
+        <motion.span
+          key={index}
+          variants={animate}
+          initial={'initial'}
+          animate={'animate'}
+          exit={'exit'}
+          transition={{ duration: 0.5 }}
+          className={styles.text}
+        >
+          {textArray[index]}
+        </motion.span>
+      </AnimatePresence>
+    </div>
+  );
 };

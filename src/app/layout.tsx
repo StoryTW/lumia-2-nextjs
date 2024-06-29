@@ -2,10 +2,6 @@ import type { Metadata, Viewport } from 'next';
 import { Chakra_Petch } from 'next/font/google';
 import { ReactNode } from 'react';
 import { Header } from '@/layouts/Header/Header';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/autoplay';
-import 'swiper/css/navigation';
 import '@/assets/styles/index.scss';
 import { Footer } from '@/layouts/Footer/Footer';
 
