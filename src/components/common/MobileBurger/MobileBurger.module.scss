@@ -1,0 +1,44 @@
+.mobileNav {
+  max-width: 944px;
+
+  .wrapper {
+    padding: 24px 32px;
+    position: fixed;
+    top: 104px;
+    left: 0;
+    width: 100vw;
+    height: calc(100% - 104px);
+    z-index: 3;
+    background: #000000;
+
+    @include respond(mobileL) {
+      padding: 16px 24px;
+    }
+
+    .content {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+
+      .navigation_list {
+        .list_item {
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
+
+          .link {
+            @include Semibold_14;
+            color: var(--white);
+            opacity: 0.7;
+            @include transition;
+            cursor: pointer;
+
+            &:hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

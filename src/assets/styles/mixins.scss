@@ -1,0 +1,236 @@
+// Media Queries Mixins
+@mixin respond($breakpoint) {
+  @if $breakpoint==laptopXL {
+    @media only screen and (max-width: 2560px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopL {
+    @media only screen and (max-width: 1440px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopB {
+    @media only screen and (max-width: 1250px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptopC {
+    @media only screen and (max-width: 1150px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==laptop {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletL {
+    @media only screen and (max-width: 912px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletS {
+    @media only screen and (max-width: 744px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletContainer {
+    @media only screen and (max-width: 704px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==tabletSM {
+    @media only screen and (max-width: 602px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileL {
+    @media only screen and (max-width: 475px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobile {
+    @media only screen and (max-width: 425px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileSM {
+    @media only screen and (max-width: 414px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobile375 {
+    @media only screen and (max-width: 375px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==mobileS {
+    @media only screen and (max-width: 320px) {
+      @content;
+    }
+  }
+}
+
+// Smooth Transition
+@mixin transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+@mixin transition_500 {
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+//FONTS
+
+@mixin Regular_10 {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin Regular_12 {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin Regular_14 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin Regular_16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+@mixin Regular_20 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24.2px;
+}
+
+@mixin Regular_24 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+@mixin Regular_32 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@mixin Regular_72 {
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 1.44px;
+}
+
+@mixin Semibold_12 {
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+}
+
+@mixin Semibold_14 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+}
+
+@mixin Semibold_16 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+@mixin Semibold_24 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@mixin Semibold_32 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34.56px;
+}
+
+@mixin Semibold_50 {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 54px;
+}
+
+@mixin Semibold_60 {
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 90px;
+}
+
+@mixin Semibold_100 {
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 108px;
+}
+
+@mixin Bold_32 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+
+
+

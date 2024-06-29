@@ -1,0 +1,117 @@
+.mainSection {
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 64px;
+
+  @include respond(tabletL) {
+    padding: 0px 24px;
+  }
+
+  @include respond(tablet) {
+    flex-direction: column-reverse;
+    justify-content: start;
+    height: 100%;
+    min-height: 100%;
+    margin-bottom: 48px;
+  }
+
+  @include respond(tabletL) {
+    padding: 0px 24px;
+  }
+
+  @include respond(tabletL) {
+    flex-direction: column;
+    justify-content: start;
+    height: 100%;
+    min-height: 100%;
+    margin-bottom: 248px;
+  }
+
+  .wrp {
+    position: relative;
+    height: max-content;
+    padding-top: 120px;
+    z-index: 2;
+
+    @include respond(tablet) {
+      padding-top: 12px;
+    }
+
+    .info {
+      max-width: 650px;
+
+      .title {
+        margin-bottom: 24px;
+        text-align: left;
+        background: linear-gradient(90deg, #b6daff 0%, #fff 45.5%, #505e7d 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 91px;
+        font-style: normal;
+        font-weight: 300;
+        letter-spacing: 1.82px;
+
+        @include respond(tabletL) {
+          font-size: 64px;
+        }
+
+        @include respond(mobileL) {
+          font-size: 40px;
+        }
+      }
+
+      .description {
+        @include Regular_32;
+        color: var(--white);
+        text-shadow: var(--text_shadow);
+
+        @include respond(tabletL) {
+          font-size: 22px;
+        }
+
+        @include respond(mobileL) {
+          font-size: 20px;
+        }
+
+        &.margin {
+          margin-bottom: 34px;
+        }
+      }
+    }
+  }
+
+  .videoWrapper {
+    .video {
+      position: absolute;
+      right: -30%;
+      top: -150px;
+      width: 100%;
+      min-width: 100%;
+      min-height: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      overflow: hidden;
+
+      @include respond(laptopB) {
+        top: 80px;
+      }
+
+      @include respond(tabletL) {
+        //   top: 300px;
+        //   bottom: 0px;
+        // position: static;
+        object-fit: contain;
+        height: 400px;
+        width: 400px;
+        transform: scale(2);
+        top: 100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.partnersSection {
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 0px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include respond(tabletL) {
+    padding: 0px 24px;
+    margin-bottom: 82px;
+  }
+
+  .title {
+    background: linear-gradient(90deg, #b6daff 0%, #ffffff 45.5%, #505e7d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 72px;
+    margin-bottom: 34px;
+    font-weight: 400;
+    text-align: center;
+
+    @include respond(tabletL) {
+      font-size: 32px;
+    }
+
+    @include respond(mobileL) {
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    @include respond(mobile375) {
+      @include Semibold_24;
+    }
+  }
+
+  .description {
+    font-size: 25px;
+    text-align: center;
+    max-width: 786px;
+    margin-bottom: 40px;
+
+    @include respond(mobileL) {
+      @include Regular_16;
+      margin-bottom: 24px;
+    }
+
+    @include respond(mobile375) {
+      @include Regular_14;
+    }
+  }
+
+  .list {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(200px, 230px));
+    gap: 60px 30px;
+    justify-content: center;
+    margin-bottom: 24px;
+
+    @include respond(laptopC) {
+      grid-template-columns: repeat(3, minmax(140px, 230px));
+      gap: 24px;
+    }
+
+    @include respond(tabletL) {
+      margin-top: 0px;
+    }
+
+    @include respond(tablet) {
+      grid-template-columns: repeat(2, minmax(140px, 230px));
+      gap: 40px;
+    }
+
+    .card {
+      // padding: 2px;
+      border-radius: 6px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & img {
+        height: max-content;
+      }
+    }
+  }
+}

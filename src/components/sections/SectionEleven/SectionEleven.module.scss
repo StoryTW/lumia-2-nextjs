@@ -1,0 +1,102 @@
+.sectionEight {
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 64px;
+
+  @include respond(tabletL) {
+    padding: 0px 24px;
+  }
+
+  @include respond(tablet) {
+    flex-direction: column-reverse;
+    justify-content: start;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  .wrp {
+    position: relative;
+    height: max-content;
+    padding-top: 120px;
+    z-index: 2;
+
+    @include respond(tablet) {
+      padding-top: 12px;
+    }
+    
+    .info {
+      max-width: 500px;
+      
+      .title {
+        text-align: left;
+        margin-bottom: 42px;
+        font-size: 72px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; /* 100.8px */
+        letter-spacing: 1.44px;
+        background: linear-gradient(90deg, #B6DAFF 0%, #FFF 45.5%, #505E7D 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+  
+        @include respond(tabletL) {
+          font-size: 32px;
+        }
+      }
+  
+      .description {
+        position: relative;
+
+        &::before {
+          content: "";
+          display: block;
+          background: var(--white);
+          width: 1px;
+          height: 84%;
+          position: absolute;
+          left: 13px;
+          top: 11px;
+          z-index: 333;
+        }
+  
+        .item {
+          list-style: none;
+          font-size: 20px;
+          margin-bottom: 20px;
+          padding-left: 40px;
+          position: relative;
+          z-index: 2;
+          color: var(--white);
+
+          @include respond(mobileL) {
+            font-size: 18px;
+          }
+
+          &::before {
+            content: url('/dot.svg');
+            display: block;
+            position: absolute;
+            border-radius: 40px;
+            left: 0;
+          }
+        }
+
+        
+
+        .dash {
+          height: 1px;
+          width: 200px;
+          opacity: 0.5;
+          background-color: var(--white);
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}
