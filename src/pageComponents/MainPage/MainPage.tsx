@@ -2,12 +2,21 @@ import { SectionGrid } from '@/components/sections/SectionGrid/SectionGrid';
 import styles from './MainPage.module.scss';
 import { SectionApi } from '@/components/sections/SectionApi/SectionApi';
 import { SectionOne } from '@/components/sections/SectionOne/SectionOne';
+import { SectionTrust } from '@/components/sections/SectionTrust/SectionTrust';
+import { SectionJustVideo } from '@/components/sections/SectionJustVideo/SectionJustVideo';
+import { SectionOneSimple } from '@/components/sections/SectionOneSimple/SectionOneSimple';
+import { SectionDaCex } from '@/components/sections/SectionDaCex/SectionDaCex';
 
 export function MainPage() {
   return (
     <main id='mainPage' className={styles.mainPage}>
-      <SectionOne />
-      <SectionApi
+      {/* <SectionOne /> */}
+
+      {/* <SectionGlow /> */}
+
+      <SectionDaCex />
+
+      {/* <SectionApi
         id='three'
         title='Swap API'
         description='Gain a massive competitive edge by harnessing the untapped liquidity of CEXs, leveraging a seamless routing mechanism to ensure your users benefit from the most optimal liquidity routes.'
@@ -24,9 +33,17 @@ export function MainPage() {
         title='Bridge API'
         description='Empower your users with the easiest, fastest, and most secure cross-chain bridging experience powered by a trustless, peer-to-peer environment.'
         video='6'
-      />
+      /> */}
+
+      {/* <SectionAccelerate /> */}
 
       <SectionGrid />
+
+      <SectionJustVideo />
+
+      <SectionTrust />
+
+      <SectionOneSimple />
     </main>
   );
 }

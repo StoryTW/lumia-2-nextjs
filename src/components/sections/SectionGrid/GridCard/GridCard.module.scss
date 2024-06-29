@@ -3,12 +3,23 @@
     display: flex;
     flex-direction: column;
 
+    @include respond(mobileL) {
+      align-items: center;
+    }
+
     .content {
       width: 326px;
       height: 326px;
       min-width: 326px;
       min-height: 326px;
       background: white;
+
+      @include respond(tabletL) {
+        width: 168px;
+        height: 168px;
+        min-width: 168px;
+        min-height: 168px;
+      }
     }
 
     .title {
@@ -17,10 +28,26 @@
       background: linear-gradient(90deg, #B6DAFF 0%, #FFFFFF 45.5%, #505E7D 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+
+      @include respond(tabletL) {
+        font-size: 36px;
+      }
+
+      @include respond(mobileL) {
+        text-align: center
+      }
     }
 
     .description {
       @include Regular_24;
+
+      @include respond(tabletL) {
+        font-size: 18px;
+      }
+
+      @include respond(mobileL) {
+        text-align: center
+      }
     }
   }
 }

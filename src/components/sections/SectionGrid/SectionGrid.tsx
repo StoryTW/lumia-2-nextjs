@@ -4,32 +4,32 @@ import { GridCard } from './GridCard/GridCard';
 
 const data = [
   {
-    content: <></>,
+    video: '8',
     title: 'Deep Multi-CEX Liquidity',
     description: 'Aggregate liquidity from multiple centralized exchanges.',
   },
   {
-    content: <></>,
+    video: '9',
     title: 'Trustless & Non-Custodial',
     description: 'Maintain full control over your assets.',
   },
   {
-    content: <></>,
+    video: '10',
     title: 'Gasless, Signature-Based Trading UX',
     description: 'Streamline transactions without gas fees.',
   },
   {
-    content: <></>,
+    video: '11',
     title: 'Ultra Fast & Reliable Price Feeds',
     description: 'Ensure accurate and timely valuations.',
   },
   {
-    content: <></>,
+    video: '12',
     title: 'Capital Efficient & Delta Neutral',
     description: 'Optimize yield safely.',
   },
   {
-    content: <></>,
+    video: '13',
     title: 'Secure by Design',
     description: 'Protect RWA assets with robust security features.',
   },
@@ -40,7 +40,14 @@ export const SectionGrid = () => {
     <section id='gridSection' className={styles.sectionGrid}>
       <div className={styles.wrapper}>
         {data.map((card, index) => {
-          return <GridCard key={index} title={card.title} description={card.description} />;
+          return (
+            <GridCard
+              key={index}
+              title={card.title}
+              description={card.description}
+              video={card.video}
+            />
+          );
         })}
       </div>
     </section>

@@ -2,10 +2,26 @@
   margin-bottom: 220px;
   display: flex;
   justify-content: center;
+  padding: 0 64px;
+
+  @include respond(tabletL) {
+    padding: 0 20px;
+    margin-bottom: 80px;
+  }
 
   .wrapper {
     display: grid;
     grid-template-columns: repeat(3, minmax(100px, 500px));
     gap: 60px;
+
+    @include respond(tabletL) {
+      grid-template-columns: repeat(2, minmax(100px, 500px));
+      gap: 45px;
+    }
+
+    @include respond(mobileL) {
+      grid-template-columns: minmax(100px, 500px);
+      gap: 45px;
+    }
   }
 }

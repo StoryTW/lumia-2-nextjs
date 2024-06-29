@@ -1,0 +1,58 @@
+.section {
+  height: 100%;
+  position: relative;
+  margin-bottom: 240px;
+
+  @include respond(tabletL) {
+    margin-bottom: 169px;
+  }
+
+  .wrp {
+    padding: 104px 64px 865px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(tabletL) {
+      padding: 0px 20px 365px;
+    }
+
+    @include respond(mobileL) {
+      padding: 0px 20px 298px;
+    }
+
+    .title {
+      @include Regular_52;
+      text-align: center;
+      margin-bottom: 32px;
+
+      @include respond(tabletL) {
+        font-size: 42px;
+        margin-bottom: 14px;
+      }
+    }
+
+    .description {
+      @include Regular_24;
+      max-width: 1200px;
+      text-align: center;
+
+      @include respond(tabletL) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .videoWrapper {
+    position: absolute;
+    bottom: 0px;
+    z-index: -1;
+    overflow: hidden;
+    object-fit: cover;
+
+    @include respond(mobileL) {
+      bottom: 0px;
+      transform: scale(1.2);
+    }
+  }
+}

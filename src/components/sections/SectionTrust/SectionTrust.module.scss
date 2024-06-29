@@ -1,0 +1,66 @@
+.sectionTrust {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  .wrp {
+    padding: 300px 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include respond(tabletL) {
+      padding: 192px 20px;
+    }
+
+    @include respond(mobileL) {
+      padding: 135px 20px;
+    }
+
+    h2 {
+      @include Regular_72;
+      background: linear-gradient(90deg, #b6daff 0%, #fff 45.5%, #505e7d 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 72px;
+      text-align: center;
+
+      @include respond(tabletL) {
+        font-size: 42px;
+        margin-bottom: 36px;
+      }
+    }
+
+    .card {
+      padding: 48px;
+      border-radius: 24px;
+      border: 2px solid #1f2b39;
+      background: #040609;
+      box-shadow:
+        0px 0px 69.4px 0px rgba(24, 33, 43, 0.69) inset,
+        0px 0px 16.6px 0px rgba(80, 134, 193, 0.44);
+
+      width: 100%;
+      max-width: 900px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include respond(tabletL) {
+        padding: 24px;
+      }
+
+        .comment {
+          @include Regular_24;
+          color: var(--white);
+          margin-bottom: 42px;
+          text-align: center;
+
+          @include respond(tabletL) {
+            @include Regular_18;
+          }
+        }
+    }
+  }
+}
