@@ -6,6 +6,7 @@ import { SectionTrust } from '@/components/sections/SectionTrust/SectionTrust';
 import { SectionJustVideo } from '@/components/sections/SectionJustVideo/SectionJustVideo';
 import { SectionOneSimple } from '@/components/sections/SectionOneSimple/SectionOneSimple';
 import { SectionDaCex } from '@/components/sections/SectionDaCex/SectionDaCex';
+import { SectionAccelerate } from '@/components/sections/SectionAccelerate/SectionAccelerate';
 
 export function MainPage() {
   return (
@@ -35,7 +36,7 @@ export function MainPage() {
         video='6'
       /> */}
 
-      {/* <SectionAccelerate /> */}
+      <SectionAccelerate />
 
       <SectionGrid />
 
