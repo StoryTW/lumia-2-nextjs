@@ -1,6 +1,5 @@
 .mainSection {
   height: 100%;
-  // min-height: 1000px;
   position: relative;
   scroll-snap-align: start;
   display: flex;
@@ -8,7 +7,11 @@
   padding: 334px 64px;
 
   @include respond(tabletL) {
-    padding: 0px 24px;
+    padding: 256px 24px;
+  }
+
+  @include respond(mobileL) {
+    padding: 286px 24px 0;
   }
 
   .wrp {
@@ -50,17 +53,9 @@
       object-fit: cover;
       z-index: -1;
 
-      // @include respond(laptopB) {
-      //   top: 80px;
-      // }
-
-      // @include respond(tabletL) {
-      //   object-fit: contain;
-      //   height: 400px;
-      //   width: 400px;
-      //   transform: scale(2);
-      //   top: 100px;
-      // }
+      @include respond(mobileL) {
+        top: 0px;
+      }
     }
   }
 }
