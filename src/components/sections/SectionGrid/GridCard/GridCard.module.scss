@@ -12,7 +12,15 @@
       height: 326px;
       min-width: 326px;
       min-height: 326px;
-      background: white;
+      background: transparent;
+      overflow: hidden;
+
+      @include respond(laptopL) {
+        width: 256px;
+        height: 256px;
+        min-width: 256px;
+        min-height: 256px;
+      }
 
       @include respond(tabletL) {
         width: 168px;
@@ -29,6 +37,10 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
 
+      @include respond(laptopL) {
+        font-size: 36px;
+      }
+
       @include respond(tabletL) {
         font-size: 36px;
       }
@@ -40,6 +52,10 @@
 
     .description {
       @include Regular_24;
+
+      @include respond(laptopL) {
+        font-size: 20px;
+      }
 
       @include respond(tabletL) {
         font-size: 18px;

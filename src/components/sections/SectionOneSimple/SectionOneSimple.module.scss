@@ -24,6 +24,10 @@
       -webkit-text-fill-color: transparent;
       text-align: center;
 
+      @include respond(laptopL) {
+        font-size: 52px;
+      }
+
       @include respond(tabletL) {
         font-size: 42px;
         margin-bottom: 14px;
@@ -34,6 +38,10 @@
       @include Regular_24;
       max-width: 475px;
       text-align: center;
+
+      @include respond(laptopL) {
+        font-size: 20px;
+      }
 
       @include respond(tabletL) {
         font-size: 20px;

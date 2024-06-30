@@ -39,6 +39,10 @@
         text-align: left;
         margin-bottom: 34px;
 
+        @include respond(laptopL) {
+          font-size: 42px;
+        }
+
         @include respond(tabletL) {
           font-size: 42px;
           margin-bottom: 20px;
@@ -49,6 +53,10 @@
       .description {
         @include Regular_20;
         color: var(--white);
+
+        @include respond(tabletL) {
+          text-align: center;
+        }
       }
     }
   }
