@@ -11,6 +11,10 @@
   width: 100%;
   text-align: center;
 
+  @include respond(tabletL) {
+    font-size: 32px;
+  }
+
   @include respond(mobileL) {
     font-size: 20px;
   }

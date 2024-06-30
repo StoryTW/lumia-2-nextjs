@@ -2,27 +2,28 @@
 import React, { useRef } from 'react';
 import styles from './SectionGlow.module.scss';
 import { motion, useInView } from 'framer-motion';
+import { Chip } from './Chip/Chip';
 
 const data = [
   {
-    title: 'RWAs'
+    title: 'RWAs',
   },
   {
-    title: 'Wallets'
+    title: 'Wallets',
   },
   {
-    title: 'Orderbook DEXs'
+    title: 'Orderbook DEXs',
   },
   {
-    title: 'Liquidity Aggregators'
+    title: 'Liquidity Aggregators',
   },
   {
-    title: 'AMM DEXs'
+    title: 'AMM DEXs',
   },
   {
-    title: 'Bridges'
+    title: 'Bridges',
   },
-]
+];
 
 export const SectionGlow = () => {
   const refTitle = useRef(null);
@@ -42,9 +43,7 @@ export const SectionGlow = () => {
       >
         <div className={styles.main}>
           <h3 className={styles.title}>Grow your business</h3>
-          <div className={styles.description}>
-          With our cutting edge liquidity solutions
-          </div>
+          <div className={styles.description}>With our cutting edge liquidity solutions</div>
         </div>
         <div className={styles.list}>
           {data.map((card, index) => {
@@ -52,9 +51,15 @@ export const SectionGlow = () => {
               <div key={index} className={styles.card}>
                 {card.title}
               </div>
-            )
+            );
           })}
         </div>
+        <Chip name='RWAs' className={styles.rwas} reverse />
+        <Chip name='AMM DEXs' className={styles.amm} reverse />
+        <Chip name='Orderbook DEXs' className={styles.order} reverse />
+        <Chip name='Wallets' className={styles.wallet} />
+        <Chip name='Liquidity Aggregators' className={styles.liquid} />
+        <Chip name='Bridges' className={styles.bridge} />
       </motion.div>
       <div className={styles.videoWrapper}>
         <video
