@@ -45,11 +45,11 @@
       -webkit-text-fill-color: transparent;
 
       @include respond(laptop1920) {
-        font-size: 36px;
+        font-size: 28px;
       }
 
       @include respond(tabletL) {
-        font-size: 36px;
+        font-size: 28px;
       }
 
       @include respond(mobileL) {
@@ -61,7 +61,7 @@
       @include Regular_24;
 
       @include respond(laptop1920) {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       @include respond(tabletL) {
