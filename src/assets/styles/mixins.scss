@@ -6,6 +6,12 @@
     }
   }
 
+  @if $breakpoint==laptop1920 {
+    @media only screen and (max-width: 1920px) {
+      @content;
+    }
+  }
+
   @if $breakpoint==laptopL {
     @media only screen and (max-width: 1440px) {
       @content;
