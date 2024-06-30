@@ -1,0 +1,85 @@
+.section {
+  height: 100%;
+  position: relative;
+  margin-bottom: 60px;
+
+  .wrp {
+    padding: 223px 64px 424px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @include respond(tabletL) {
+      padding: 365px 20px 0px;
+    }
+
+    @include respond(mobileL) {
+      padding: 298px 20px 0px;
+    }
+
+    .main {
+      padding: 34px 130px;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(6.5px);
+
+      @include respond(tabletL) {
+        display: none;
+      }
+
+      .title {
+        @include Regular_52;
+        text-align: center;
+        margin-bottom: 32px;
+      }
+
+      .description {
+        @include Regular_24;
+        max-width: 1200px;
+        text-align: center;
+
+        @include respond(tabletL) {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .list {
+      display: none;
+
+      @include respond(tabletL) {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .card {
+        @include Regular_20;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #19244A;
+        text-align: center;
+      }
+    }
+  }
+
+  .videoWrapper {
+    position: absolute;
+    z-index: -1;
+    overflow: hidden;
+    object-fit: cover;
+    top: -10%;
+
+    @include respond(tabletL) {
+      top: 10%;
+    }
+
+    @include respond(mobileL) {
+      // bottom: 0px;
+      transform: scale(1.5);
+    }
+  }
+}

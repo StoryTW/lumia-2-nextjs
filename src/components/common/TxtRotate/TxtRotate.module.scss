@@ -10,4 +10,8 @@
   position: absolute;
   width: 100%;
   text-align: center;
+
+  @include respond(mobileL) {
+    font-size: 20px;
+  }
 }

@@ -7,13 +7,14 @@ import { SectionJustVideo } from '@/components/sections/SectionJustVideo/Section
 import { SectionOneSimple } from '@/components/sections/SectionOneSimple/SectionOneSimple';
 import { SectionDaCex } from '@/components/sections/SectionDaCex/SectionDaCex';
 import { SectionAccelerate } from '@/components/sections/SectionAccelerate/SectionAccelerate';
+import { SectionGlow } from '@/components/sections/SectionGlow/SectionGlow';
 
 export function MainPage() {
   return (
     <main id='mainPage' className={styles.mainPage}>
-      {/* <SectionOne /> */}
+      <SectionOne />
 
-      {/* <SectionGlow /> */}
+      <SectionGlow />
 
       <SectionDaCex />
 
