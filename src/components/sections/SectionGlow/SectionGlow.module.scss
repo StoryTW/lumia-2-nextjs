@@ -72,6 +72,10 @@
     object-fit: cover;
     top: -10%;
 
+    @include respond(laptopB) {
+      top: 10%;
+    }
+
     @include respond(tabletL) {
       top: 0%;
     }
@@ -104,7 +108,7 @@
 
   .order {
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     left: 64px;
 
     @include respond(tabletL) {
@@ -124,7 +128,7 @@
 
   .liquid {
     position: absolute;
-    bottom: 50%;
+    bottom: 40%;
     right: 64px;
 
     @include respond(tabletL) {

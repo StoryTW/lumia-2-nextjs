@@ -54,7 +54,7 @@ export const SectionAccelerate = () => {
           loop
           autoPlay
         >
-          <source src={'/video/7.mp4'} type='video/mp4' />
+          <source src={'/video/5.mp4'} type='video/mp4' />
         </video>
       </div>
     </section>

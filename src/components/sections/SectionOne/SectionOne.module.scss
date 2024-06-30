@@ -25,13 +25,14 @@
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 91px;
+        font-size: 71px;
         font-style: normal;
         font-weight: 300;
         letter-spacing: 1.82px;
 
         @include respond(tabletL) {
           font-size: 64px;
+          text-align: center;
         }
 
         @include respond(mobileL) {
@@ -45,7 +46,7 @@
     .video {
       position: absolute;
       right: 0%;
-      top: -150px;
+      top: -200px;
       width: 100%;
       min-width: 100%;
       min-height: 100%;
