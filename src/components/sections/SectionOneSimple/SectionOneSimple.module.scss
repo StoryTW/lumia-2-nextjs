@@ -57,13 +57,14 @@
     position: absolute;
     bottom: 100px;
     z-index: -1;
-    right: -40%;
+    right: 0;
     overflow: hidden;
     object-fit: cover;
     transform: scale(1.5);
 
     @include respond(laptop1920) {
       bottom: -100px;
+      right: -40%;
       transform: scale(1);
     }
 
