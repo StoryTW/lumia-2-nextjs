@@ -34,17 +34,17 @@ export const SectionGlow = () => {
 
   return (
     <section className={styles.section}>
-      <motion.div
-        className={styles.wrp}
-        ref={refTitle}
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: inViewTitle ? 1 : 0, scale: inViewTitle ? 1 : 0.9 }}
-        transition={{ duration: 1.5 }}
-      >
-        <div className={styles.main}>
+      <div className={styles.wrp}>
+        <motion.div
+          className={styles.main}
+          ref={refTitle}
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: inViewTitle ? 1 : 0, scale: inViewTitle ? 1 : 0.9 }}
+          transition={{ duration: 1.5 }}
+        >
           <h3 className={styles.title}>Grow your business</h3>
           <div className={styles.description}>With our cutting edge liquidity solutions</div>
-        </div>
+        </motion.div>
         <div className={styles.list}>
           {data.map((card, index) => {
             return (
@@ -60,7 +60,7 @@ export const SectionGlow = () => {
         <Chip name='Wallets' className={styles.wallet} />
         <Chip name='Liquidity Aggregators' className={styles.liquid} />
         <Chip name='Bridges' className={styles.bridge} />
-      </motion.div>
+      </div>
       <div className={styles.videoWrapper}>
         <video
           className={styles.video}
